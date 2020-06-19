@@ -506,22 +506,27 @@ document.write("<br>Gross Amount Payable (after Due Date): <b>" + GrossAmountPay
 //Task 1
 /*1. Write a function that displays current date & time in your browser. */
 
-let currentDate = new Date();
-document.write(currentDate);
-
+function dateTime() {
+    let currentDate = new Date();
+    return document.write(currentDate);
+}
+dateTime();
 //Task 2
 /*2. Write a function that takes first & last name and then it greets the user using his full name */
 
+function greet(a, b) {
+    let firstCapital = a.slice(0, 1);
+    let otherLetters = a.slice(1);
+    var firstName = firstCapital.toUpperCase() + otherLetters;
+    let firstAlphabate = b.slice(0, 1);
+    let othersAlphabate = b.slice(1);
+    var LastName = firstAlphabate.toUpperCase() + othersAlphabate;
+    let fullName = firstName.concat(" " + LastName);
+    return alert("Good Moring " + fullName);
+}
 let first = prompt("Enter First Name");
-let firstCapital = first.slice(0, 1);
-let otherLetters = first.slice(1);
-var firstName = firstCapital.toUpperCase() + otherLetters;
 let last = prompt("Enter Last Name");
-let firstAlphabate = last.slice(0, 1);
-let othersAlphabate = last.slice(1);
-var LastName = firstAlphabate.toUpperCase() + othersAlphabate;
-let fullName = firstName.concat(" " + LastName);
-alert("Good Moring " + fullName);
+greet(first, last);
 
 //Task 3
 /*3. Write a function that adds two numbers (input by user)
